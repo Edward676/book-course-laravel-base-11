@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('test')->nullable();
             $table->string('image')->nullable();
             $table->enum('posted', ['yes', 'not'])->default(['not']);
-            $table->foreignId('category-id')->constrained()
+            $table->foreignId('category_id')->constrained()
                 ->onDelete('cascade');
                 
             $table->timestamps();
