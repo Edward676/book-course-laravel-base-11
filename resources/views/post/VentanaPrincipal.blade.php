@@ -25,7 +25,8 @@
                     <h2 class="accordion-header">
                         <button>
                              <div class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicios" aria-expanded="true">
-                            Servicios
+                            <b onclick="toggleDropdown()"> Servicios</b>
+                            <div id="dropdownMenu" class="dropdown-content">
                         </button>
                     </h2>
                     <div id="servicios" class="accordion-collapse collapse show">
@@ -39,7 +40,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unidades">
-                            Unidades
+                           <b> Unidades </b>
                         </button>
                     </h2>
                     <div id="unidades" class="accordion-collapse collapse">
@@ -53,7 +54,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reportes">
-                            Reportes
+                           <b> Reportes </b>
                         </button>
                     </h2>
                     <div id="reportes" class="accordion-collapse collapse">

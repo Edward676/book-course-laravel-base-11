@@ -4,7 +4,7 @@
 <div class="container">
     <title>Registrar Servicio Programado</title>
 
-    <h5>Registrar Servicio Programado</h5>
+    <h5><center><b>post/Registrar Servicio Programado</b></center></h5>
     <form action="{{ route('taxi_services.store') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -27,4 +27,5 @@
     </form>
 </div>
 
+<center><p>&copy; Sistema Central Taxis 'Grito' 2024</p> </center>
 

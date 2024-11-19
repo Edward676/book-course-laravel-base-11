@@ -8,11 +8,12 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     */
+     */    
     public function up(): void
     {
         Schema::create('lista__operadores', function (Blueprint $table) {
-            $table->id();
+            $table->id('clave_Operador');
+            // $table->integer('clave_Operador')->unique();
             $table->timestamps();
         });
     }

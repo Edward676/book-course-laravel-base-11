@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('lista__duenio', function (Blueprint $table) {
-            $table->id();
+            $table->id('clave_Duenio');
             $table->timestamps();
         });
     }

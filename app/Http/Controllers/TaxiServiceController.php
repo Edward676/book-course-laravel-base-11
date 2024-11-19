@@ -11,12 +11,12 @@ class TaxiServiceController extends Controller
     public function index()
     {
         $services = TaxiServiceController::class;
-        return view('taxi_services.index', compact('services'));
+        return view('registrarservicioprogramado', compact('services'));
     }
 
     public function create()
     {
-        return view('taxi_services.create');
+        return view('registrarservicioprogramado');
     }
 
     public function store(Request $request)
@@ -30,7 +30,6 @@ class TaxiServiceController extends Controller
 
         TaxiServiceController::create($request->all());
 
-        return redirect()->route('taxi_services.index')
-                         ->with('success', 'Servicio programado correctamente.');
+        return redirect()->route('RegistrarServicioProgramado') ->with('success', 'Servicio programado correctamente.');
     }
 }

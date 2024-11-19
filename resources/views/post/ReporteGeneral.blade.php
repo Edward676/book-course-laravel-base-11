@@ -24,8 +24,9 @@
 <body>
 
 <div class="container report-container">
-   <center> <h5>Reporte General</h5> </center>
+    <h3>Reporte General</h3>
 
+    <!-- Filtros de Fecha -->
     <div class="row mb-3">
         <div class="col-md-4">
             <label for="fechaInicio" class="form-label">Fecha Inicio:</label>
@@ -36,12 +37,15 @@
             <input type="date" id="fechaTermino" class="form-control">
         </div>
         <div class="col-md-4 d-flex align-items-end">
-            <button class="btn btn-primary me-2" onclick="consultar()">Consultar</button>
-            <button class="btn btn-secondary me-2" onclick="imprimir()">Imprimir</button>
-            <button class="btn btn-success" onclick="guardar()">Guardar</button>
+        
+            <button class="btn btn-primary me-2" onclick="window.location.href='{{ route('consultar') }}'">Consultar</button>
+            <button class="btn btn-secondary me-2" onclick="window.location.href='{{ route('imprimir') }}'">Imprimir</button>
+            <button class="btn btn-success" onclick="window.location.href='{{ route('Guardar') }}'">Guardar</button>
+
         </div>
     </div>
 
+    <!-- Tabla de Servicios -->
     <div class="table-container">
         <table class="table table-bordered">
             <thead>
@@ -62,13 +66,15 @@
         </table>
     </div>
 
+    <!-- Número de Servicios -->
     <div class="text-end">
         <strong>Número de Servicios en el Período:</strong> 0
     </div>
 
+    <!-- Botones de Imprimir y Guardar -->
     <div class="buttons-container">
-        <button class="btn btn-secondary me-2" onclick="imprimir()">Imprimir</button>
-        <button class="btn btn-success" onclick="guardar()">Guardar</button>
+        <button class="btn btn-secondary me-2" onclick="window.location.href='{{ route('imprimir') }}'">Imprimir</button>
+        <button class="btn btn-success" onclick="window.location.href='{{ route('Guardar') }}'">Guardar</button>
     </div>
 </div>
 
@@ -86,8 +92,9 @@
     }
 </script>
 
-          <center><p>&copy; Sistema Central Taxis 'Grito' 2024</p> </center>
-
 </body>
+
+    
 </html>
 
+<center><p>&copy; Sistema Central Taxis 'Grito' 2024</p> </center>

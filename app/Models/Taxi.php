@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Taxi extends Model
 {
     use HasFactory;
+
+    
 }

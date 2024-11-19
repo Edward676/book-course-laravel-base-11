@@ -10,7 +10,7 @@ class UnidadTaxiController extends Controller
 {
     public function create()
     {
-        return view('unidad_taxi.create');
+        return view('post/unidad_taxi.create');
     }
     public function index()
     {
