@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Unidad</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
 
         .container {
@@ -13,7 +14,7 @@
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #FFD700;
+            background-color: white;
         }
         .header {
             display: flex;
@@ -64,9 +65,9 @@
         <label for="numUnidad">Num. Unidad:</label>
         <input type="text" id="numUnidad" name="num_unidad">
         
-        <button onclick="consultar()">Consultar</button>
-        <button onclick="imprimir()">Imprimir</button>
-        <button onclick="guardar()">Guardar</button>
+        <button class="btn btn-primary me-2" onclick="window.location.href='https://caguamitas-chipichapa.hf.space/ReporteUnidad'">Consultar</button>
+                    <button class="btn btn-secondary me-2" onclick="window.location.href='https://caguamitas-chipichapa.hf.space/ReporteUnidadpdf'">Imprimir</button>
+                    <button class="btn btn-success" onclick="window.location.href='https://caguamitas-chipichapa.hf.space/ReporteUnidad'">Guardar</button>
     </div>
     
     <table>
@@ -87,27 +88,19 @@
         </tbody>
     </table>
     
-    <p>Número de Servicios en el Período: <span id="numServicios">0</span></p>
+    <div class="text-end">
+ <p>  <center>   <strong>Número de Servicios en el Período:</strong> 0
+    </div></center>
+    </p>
     
-    <div class="footer">
-        <button onclick="imprimir()">Imprimir</button>
-        <button onclick="guardar()">Guardar</button>
+  <center>  <div class="buttons-container">
+  <button class="btn btn-secondary me-2" onclick="window.location.href='https://caguamitas-chipichapa.hf.space/ReporteUnidadpdf'">Imprimir</button>
+  <button class="btn btn-success" onclick="window.location.href='https://caguamitas-chipichapa.hf.space/ReporteUnidad'">Guardar</button>
+    </center>
     </div>
 </div>
 
-<script>
-    function consultar() {
-        alert("Consultando...");
-    }
 
-    function imprimir() {
-        alert("Imprimiendo...");
-    }
-
-    function guardar() {
-        alert("Guardando...");
-    }
-</script>
 
 <center><p>&copy; Sistema Central Taxis 'Grito' 2024</p> </center>
 

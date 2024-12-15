@@ -9,5 +9,15 @@ class Taxi extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = [
+        'placa',
+        'modelo',
+        'marca',
+        'color'
+    ];
+
+    public function viajes()
+    {
+        return $this->hasMany(viaje::class);
+    }
 }

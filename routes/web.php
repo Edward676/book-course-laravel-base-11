@@ -82,8 +82,26 @@ Route::post('/taxis', function () {
     return redirect('/taxis');
 })->name('taxis.store');
 
+
+use App\Http\Controllers\ReporteUnidadControllerontroller;
 // registrar nuevo servicio
 use App\Http\Controllers\ServicioController;
+
+// Ruta para el botón "Buscar"
+Route::post('/servicio/buscar', [ServicioController::class, 'buscar'])->name('servicio.buscar');
+
+// Ruta para "Seleccionar Dirección"
+Route::post('/servicio/seleccionar', [ServicioController::class, 'seleccionar'])->name('servicio.seleccionar');
+
+// Ruta para "Agregar Dirección"
+Route::get('/servicio/crear', [ServicioController::class, 'crear'])->name('servicio.crear');
+
+// Ruta para "Editar Dirección"
+Route::get('/servicio/{id}/editar', [ServicioController::class, 'editar'])->name('servicio.editar');
+
+// Ruta para "Asignar"
+Route::post('/servicio/asignar', [ServicioController::class, 'asignar'])->name('servicio.asignar');
+
 
 Route::get('/servicios/create', [ServicioController::class, 'create'])->name('registrarnuevoservicio');
 Route::post('/servicios', [ServicioController::class, 'store'])->name('servicios.store');
@@ -110,5 +128,13 @@ use App\Http\Controllers\TaxiServiceController;
 Route::get('/taxi_services', [TaxiServiceController::class, 'index'])->name('taxi_services.index');
 Route::get('/taxi_services/create', [TaxiServiceController::class, 'create'])->name('taxi_services.create');
 Route::post('/taxi_services', [TaxiServiceController::class, 'store'])->name('taxi_services.store');
+
+
+use App\Http\Controllers\UnidadController;
+
+Route::get('/unidades/registrar', [UnidadController::class, 'create'])->name('unidades.create'); // Mostrar el formulario
+Route::post('/unidades', [UnidadController::class, 'store'])->name('unidades.store'); // Procesar los datos
+Route::get('/unidades/lista', [UnidadController::class, 'index'])->name('unidades.index'); // Mostrar la lista de unidades
+
 
 

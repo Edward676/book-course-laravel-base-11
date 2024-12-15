@@ -3,56 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>post/Lista de Taxis</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>Lista de Taxis Registrados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <center><b><h1>Lista de Taxis Registrados</h1></b></center>
+    <h1>Lista de Taxis Registrados</h1>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Número Económico</th>
+                <th>Municipio</th>
+                <th>Clave Operador</th>
+                <th>Clave Dueño</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tezonapa</td>
+                    <td>tez</td>
+                    <td>tez</td>
+                </tr>
 
-        <!-- Formulario para registrar un nuevo taxi -->
-        <form action="{{ route('taxis.store') }}" method="POST">
-            @csrf
-            <div class="form-group">
-                <label for="placa">Placa:</label>
-                <input type="text" name="placa" id="placa" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="modelo">Modelo:</label>
-                <input type="text" name="modelo" id="modelo" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="color">Color:</label>
-                <input type="text" name="color" id="color" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="conductor">Conductor:</label>
-                <input type="text" name="conductor" id="conductor" class="form-control" required>
-            </div>
-            
-        </form>
+                <tr>
+                    <td>2</td>
+                    <td>Orizaba</td>
+                    <td>ori</td>
+                    <td>ori</td>
+                </tr>
 
-        <!-- Tabla para mostrar los taxis registrados -->
-        <table class="table mt-3">
-            <thead>
-                
-            </thead>
-            <tbody>
-                @if(session('no_orden'))
-                    <input type="text" name="Unidad " value="{{session('Taxi')}}" class="Unidades">
-                    <tr>
-                        <td>{{ $taxi->id }}</td>
-                        <td>{{ $taxi->placa }}</td>
-                        <td>{{ $taxi->modelo }}</td>
-                        <td>{{ $taxi->color }}</td>
-                        <td>{{ $taxi->conductor }}</td>
-                    </tr>
-                    @endif
-            </tbody>
-        </table>
-    </div>
+                <tr>
+                    <td>3</td>
+                    <td>Jalapilla</td>
+                    <td>12345</td>
+                    <td>54321</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Asociacion Caritas</td>
+                    <td>ASDFH</td>
+                    <td>POI15</td>
+                </tr>
+                    </tbody>
+    </table>
 </body>
 </html>
-
-<center><p>&copy; Sistema Central Taxis 'Grito' 2024</p> </center>
-

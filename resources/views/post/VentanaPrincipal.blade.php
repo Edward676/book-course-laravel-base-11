@@ -25,7 +25,7 @@
                     <h2 class="accordion-header">
                         <button>
                              <div class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#servicios" aria-expanded="true">
-                            <b onclick="toggleDropdown()"> Servicios</b>
+                            <b onclick="toggleDropdown()"> Servicios</b>  
                             <div id="dropdownMenu" class="dropdown-content">
                         </button>
                     </h2>
